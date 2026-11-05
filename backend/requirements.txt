@@ -1,0 +1,46 @@
+# =============================================================================
+# GASTIFY API — dependências do backend (versões fixadas)
+# =============================================================================
+# Versões pinadas para builds reprodutíveis: o que funciona na máquina de um
+# dev funciona no CI e no servidor. Atualize de forma consciente (e rode os
+# testes) quando quiser subir de versão.
+#
+# Instalação (a partir de backend/):
+#     python -m venv .venv
+#     .venv\Scripts\activate            (Windows PowerShell)
+#     source .venv/bin/activate         (Linux/macOS)
+#     pip install -r requirements.txt
+# =============================================================================
+
+# --- Framework web -----------------------------------------------------------
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+
+# --- Banco principal (PostgreSQL) -------------------------------------------
+# SQLAlchemy 2.x (estilo Mapped/mapped_column) + driver psycopg 3 (binário,
+# sem necessidade de compilar nada no Windows).
+SQLAlchemy==2.1.8
+psycopg[binary]==3.3.8
+
+# --- Validação e configuração ------------------------------------------------
+pydantic==2.14.2
+pydantic-settings==2.16.2
+python-dotenv==1.2.4
+# Validação de e-mail (EmailStr) — dependência opcional do Pydantic.
+email-validator==2.3.0
+
+# --- Autenticação (JWT) ------------------------------------------------------
+# PyJWT assina/valida o token; bcrypt guarda a senha com salt (nunca em texto).
+PyJWT==2.15.1
+bcrypt==5.0.0
+
+# --- Banco secundário (Double Backup) ---------------------------------------
+pymongo==4.19.0
+
+# --- Testes ------------------------------------------------------------------
+pytest==9.2.0
+# Cliente HTTP em memória usado pelo TestClient do FastAPI/Starlette.
+# `httpx2` é o cliente que o Starlette 1.x usa por padrão (evita o aviso de
+# depreciação); `httpx` fica como compatibilidade para ferramentas antigas.
+httpx2==2.16.0
+httpx==0.28.1

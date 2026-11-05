@@ -1,0 +1,21 @@
+# =============================================================================
+# Arquivos ignorados no backend do GASTIFY
+# =============================================================================
+# Segurança: `.env` contém senha do PostgreSQL (e futuramente JWT/NoSQL).
+# NUNCA deve ser versionado. O `.env.example` é o modelo público.
+.env
+.env.*
+!.env.example
+
+# Ambiente virtual e cache de dependências
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Artefatos locais
+*.log
+.coverage
+htmlcov/

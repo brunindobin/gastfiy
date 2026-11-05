@@ -1,0 +1,38 @@
+# =============================================================================
+# PostgreSQL local do GASTIFY (opcional, apenas desenvolvimento)
+# =============================================================================
+# Sobe o banco principal em container para quem não quer instalar o PostgreSQL
+# na máquina. Uso (a partir de backend/):
+#     docker compose up -d
+#     docker compose down          # para o container (dados preservados)
+#     docker compose down -v       # para e APAGA os dados
+#
+# As variáveis vêm do arquivo backend/.env (mesmo arquivo que a API lê) — assim
+# existe uma única fonte de verdade e nenhuma senha fica escrita aqui.
+# =============================================================================
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: gastify-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      # Sem senha no .env o container nem sobe: melhor falhar cedo do que subir
+      # um banco aberto. Copie .env.example para .env e defina a senha.
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?defina POSTGRES_PASSWORD no backend/.env}
+      POSTGRES_DB: ${POSTGRES_DB:-gastify}
+    ports:
+      # Expondo apenas em localhost: o banco não fica acessível na rede local.
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - gastify_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      # A API pode subir antes do banco; o /health indica quando está pronto.
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-gastify}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  # Volume nomeado: os dados sobrevivem a `docker compose down`.
+  gastify_pgdata:

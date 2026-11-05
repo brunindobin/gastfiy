@@ -1,0 +1,413 @@
+<!DOCTYPE html><html class="light" lang="pt-BR"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary": "#ffffff", "outline": "#6c7a71", "surface": "#f7f9fb", "surface-container-lowest": "#ffffff", "on-surface": "#191c1e", "inverse-primary": "#4edea3", "primary-container": "#10b981", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#5516be", "tertiary-container": "#b090ff", "surface-tint": "#006c49", "surface-container-high": "#e6e8ea", "surface-dim": "#d8dadc", "surface-container-low": "#f2f4f6", "on-error-container": "#93000a", "error": "#ba1a1a", "on-surface-variant": "#3c4a42", "tertiary": "#6d3bd7", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#23005c", "tertiary-fixed": "#e9ddff", "secondary-fixed": "#dae2fd", "on-background": "#191c1e", "primary-fixed": "#6ffbbe", "surface-variant": "#e0e3e5", "surface-container": "#eceef0", "inverse-on-surface": "#eff1f3", "primary": "#006c49", "on-secondary-fixed": "#131b2e", "primary-fixed-dim": "#4edea3", "inverse-surface": "#2d3133", "on-primary-fixed-variant": "#005236", "surface-container-highest": "#e0e3e5", "on-primary-fixed": "#002113", "secondary-container": "#dae2fd", "on-secondary-fixed-variant": "#3f465c", "outline-variant": "#bbcabf", "surface-bright": "#f7f9fb", "background": "#f7f9fb", "secondary-fixed-dim": "#bec6e0", "on-tertiary-container": "#4600a7", "on-primary-container": "#00422b", "on-error": "#ffffff", "error-container": "#ffdad6", "on-secondary-container": "#5c647a", "tertiary-fixed-dim": "#d0bcff", "secondary": "#565e74" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "space-md": "1rem", "gutter-desktop": "1.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem", "space-xl": "2rem", "space-2xs": "0.125rem", "margin-tablet": "1.5rem", "margin-desktop": "2.5rem", "space-xs": "0.25rem", "space-2xl": "3rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "label-md": ["Inter"], "financial-numeric": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "financial-numeric": ["32px", {"lineHeight": "36px", "fontWeight": "700"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "headline-xl-mobile": ["30px", {"lineHeight": "38px", "fontWeight": "700"}], "headline-xl": ["40px", {"lineHeight": "48px", "fontWeight": "700"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}], "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}], "headline-lg": ["28px", {"lineHeight": "36px", "fontWeight": "700"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}] } } } }</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col antialiased selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Voltar" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex items-center"><img alt="Gastify Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XRn2lsmxC7JE_b8yBZ1_LgzCkDxdxPO177yFuPGgPNw7dtpZUJaCo_YjwGaSmqwS5vhXw9K1Kz11DqQ8zm_NXSICmNYtvWLATZ3yraNWM29inbmNNigwuqrj4Munfdzj5cvizwUF94ps6jVoDOFKTkE62qT4rX5_G_YskegOfHlWQPfh3Y-JTMUHUS4Lfy_HN0yqnd7-dMVHcWJfvPvWVcMGwCfVKu9oiNmHVsoklFqw"></div></div><div class="flex items-center gap-space-xs"><button aria-label="Voltar" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex items-center"><img alt="Gastify Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XRn2lsmxC7JE_b8yBZ1_LgzCkDxdxPO177yFuPGgPNw7dtpZUJaCo_YjwGaSmqwS5vhXw9K1Kz11DqQ8zm_NXSICmNYtvWLATZ3yraNWM29inbmNNigwuqrj4Munfdzj5cvizwUF94ps6jVoDOFKTkE62qT4rX5_G_YskegOfHlWQPfh3Y-JTMUHUS4Lfy_HN0yqnd7-dMVHcWJfvPvWVcMGwCfVKu9oiNmHVsoklFqw"></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive View Container -->
+<div class="px-gutter pt-space-md pb-space-2xl space-y-space-lg max-w-lg mx-auto w-full">
+<!-- Top Mode Switch & Contextual Pill -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-space-2xs rounded-full bg-primary/10 text-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold" id="screen-mode-badge">Novo Registro</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• Carteira Principal</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold mt-space-2xs" id="screen-title">Registrar Novo Gasto</h2>
+</div>
+<!-- Quick Toggle for Demonstration of Edit vs Create -->
+<button class="flex items-center gap-space-2xs bg-surface-container hover:bg-surface-container-high text-on-surface-variant px-space-sm py-space-xs rounded-xl shadow-sm transition-all active:scale-95" id="toggle-mode-btn" title="Alternar entre Novo Registro e Edição" type="button">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+<span class="font-label-sm text-label-sm font-medium" id="toggle-mode-text">Modo Edição</span>
+</button>
+</div>
+<!-- Main Form Element -->
+<form class="space-y-space-md" id="expense-form" onsubmit="event.preventDefault();">
+<!-- Hero Input: Dynamic Monetary Display -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col items-center justify-center text-center">
+<!-- Subtle Ambient Glow -->
+<div class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-primary/10 blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-12 -left-12 w-32 h-32 rounded-full bg-secondary-container/40 blur-2xl pointer-events-none"></div>
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-space-xs mb-space-2xs" for="expense-amount-input">
+<span class="material-symbols-outlined text-[16px] text-primary">payments</span>
+          Valor da Despesa
+        </label>
+<div class="flex items-baseline justify-center gap-space-xs w-full"><span class="font-headline-md text-headline-md text-on-surface-variant font-medium select-none">R$</span><input aria-label="Valor monetário do gasto" class="font-financial-numeric text-financial-numeric text-on-surface bg-transparent text-center focus:outline-none w-auto min-w-0 max-w-[240px] tracking-tight selection:bg-primary/20 placeholder:text-surface-variant font-bold" id="expense-amount-input" inputmode="numeric" type="text" value="0,00"></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px] text-primary-container">info</span>
+          Lançamento em moeda corrente nacional
+        </p>
+</div>
+<!-- Expense Description / Name Field -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="expense-title">
+<span class="">Descrição do Gasto</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm font-normal">Obrigatório</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[20px]">shopping_cart</span>
+<input class="w-full bg-surface-container-low rounded-xl py-3 pl-11 pr-space-md font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:bg-surface-container transition-all" id="expense-title" placeholder="Ex: Almoço Restaurante Silva, Cinema..." required="" type="text">
+</div>
+</div>
+<!-- Category Picker with Visual Badges -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Categoria</label>
+<span class="font-label-sm text-label-sm text-primary font-medium" id="selected-category-label">Alimentação</span>
+</div>
+<div aria-label="Selecione a categoria" class="grid grid-cols-2 gap-space-xs sm:grid-cols-3" role="radiogroup">
+<!-- Food -->
+<button class="category-chip group flex items-center gap-space-2xs p-space-sm rounded-xl transition-all text-left active:scale-95 bg-primary/10 font-semibold" data-category="Alimentação" type="button">
+<span class="w-8 h-8 rounded-lg bg-[#E0F2FE] text-[#0369A1] flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">restaurant</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Alimentação</span>
+</button>
+<!-- Fixed/Mandatory -->
+<button class="category-chip group flex items-center gap-space-2xs p-space-sm rounded-xl transition-all text-left bg-surface-container active:scale-95" data-category="Gastos Obrigatórios" type="button">
+<span class="w-8 h-8 rounded-lg bg-[#EDE9FE] text-[#6D28D9] flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Obrigatórios</span>
+</button>
+<!-- Leisure -->
+<button class="category-chip group flex items-center gap-space-2xs p-space-sm rounded-xl transition-all text-left bg-surface-container active:scale-95" data-category="Lazer &amp; Diversão" type="button">
+<span class="w-8 h-8 rounded-lg bg-[#FFE4E6] text-[#E11D48] flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">attractions</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Lazer</span>
+</button>
+<!-- Transport -->
+<button class="category-chip group flex items-center gap-space-2xs p-space-sm rounded-xl transition-all text-left bg-surface-container active:scale-95" data-category="Transporte" type="button">
+<span class="w-8 h-8 rounded-lg bg-[#FEF3C7] text-[#B45309] flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">directions_subway</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Transporte</span>
+</button>
+<!-- Health & Wellness -->
+<button class="category-chip group flex items-center gap-space-2xs p-space-sm rounded-xl transition-all text-left bg-surface-container active:scale-95 col-span-2 sm:col-span-1" data-category="Saúde &amp; Bem-estar" type="button">
+<span class="w-8 h-8 rounded-lg bg-[#ECFDF5] text-[#006C49] flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">fitness_center</span>
+</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Saúde</span>
+</button>
+</div>
+</div>
+<!-- Date, Time and Payment Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Date & Time Input -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-xs" for="expense-datetime">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+            Data e Horário
+          </label>
+<input class="w-full bg-surface-container-low rounded-xl py-2.5 px-space-md font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container transition-all" id="expense-datetime" type="datetime-local">
+</div>
+<!-- Payment Method -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-md shadow-sm space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">credit_card</span>
+            Forma de Pagamento
+          </label>
+<div class="grid grid-cols-2 gap-space-2xs" role="radiogroup">
+<button class="payment-chip py-2 px-space-xs rounded-xl font-label-sm text-label-sm font-medium flex items-center justify-center gap-space-2xs active:scale-95 bg-primary-container text-on-primary" data-payment="Cartão de Crédito" type="button">
+<span class="material-symbols-outlined text-[16px]">credit_card</span>
+<span class="">Crédito</span>
+</button>
+<button class="payment-chip py-2 px-space-xs rounded-xl bg-surface-container text-on-surface font-label-sm text-label-sm font-medium flex items-center justify-center gap-space-2xs active:scale-95" data-payment="Pix" type="button">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+<span class="">Pix</span>
+</button>
+<button class="payment-chip py-2 px-space-xs rounded-xl bg-surface-container text-on-surface font-label-sm text-label-sm font-medium flex items-center justify-center gap-space-2xs active:scale-95" data-payment="Débito" type="button">
+<span class="material-symbols-outlined text-[16px]">point_of_sale</span>
+<span class="">Débito</span>
+</button>
+<button class="payment-chip py-2 px-space-xs rounded-xl bg-surface-container text-on-surface font-label-sm text-label-sm font-medium flex items-center justify-center gap-space-2xs active:scale-95" data-payment="Dinheiro" type="button">
+<span class="material-symbols-outlined text-[16px]">attach_money</span>
+<span class="">Dinheiro</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Recurrent Expense Switch -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-md shadow-sm flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Gasto Recorrente</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Repetir automaticamente todo mês</span>
+</div>
+</div>
+<label aria-label="Ativar recorrência de gasto" class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input class="sr-only peer" id="recurrence-toggle" type="checkbox">
+<div class="w-12 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-6 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Action Buttons Dock -->
+<div class="pt-space-sm space-y-space-sm">
+<!-- Primary Submit Button -->
+<button class="w-full h-14 rounded-2xl bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-xs shadow-md shadow-primary-container/20 hover:brightness-105 active:scale-[0.98] transition-all cursor-pointer" id="btn-save" type="button">
+<span class="material-symbols-outlined text-[22px]">check_circle</span>
+<span id="btn-save-label" class="">Salvar Despesa</span>
+</button>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Cancel Button -->
+<button class="h-12 rounded-xl bg-surface-container text-on-surface-variant font-label-lg text-label-lg font-semibold hover:bg-surface-container-high active:scale-95 transition-all cursor-pointer flex items-center justify-center gap-space-2xs" id="btn-cancel" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+            Cancelar
+          </button>
+<!-- Delete Action (Only visible in edit mode) -->
+<button class="h-12 rounded-xl bg-error-container text-on-error-container font-label-lg text-label-lg font-semibold hover:opacity-90 active:scale-95 transition-all cursor-pointer flex items-center justify-center gap-space-2xs opacity-50 pointer-events-none" id="btn-delete" title="Habilitado apenas na edição de despesa" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+            Excluir Gasto
+          </button>
+</div>
+</div>
+</form>
+<!-- Visual Confirmation Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm flex items-end sm:items-center justify-center p-gutter hidden transition-all" id="delete-modal">
+<div class="bg-surface-container-lowest rounded-3xl p-space-lg max-w-sm w-full shadow-2xl space-y-space-md transform transition-all">
+<div class="w-12 h-12 rounded-2xl bg-error-container text-on-error-container flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+</div>
+<div class="text-center space-y-space-2xs">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Excluir esta despesa?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Essa ação não pode ser desfeita e removerá este item do balanço mensal.</p>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full h-12 rounded-xl bg-error text-on-error font-label-lg text-label-lg font-bold hover:brightness-105 active:scale-95 transition-all" id="modal-confirm-delete" type="button">
+            Sim, excluir registro
+          </button>
+<button class="w-full h-12 rounded-xl bg-surface-container text-on-surface-variant font-label-lg text-label-lg font-semibold hover:bg-surface-container-high active:scale-95 transition-all" id="modal-cancel-delete" type="button">
+            Voltar
+          </button>
+</div>
+</div>
+</div>
+<!-- Delight Feedback Toast Notification -->
+<div class="fixed bottom-6 inset-x-gutter max-w-sm mx-auto z-50 bg-inverse-surface text-inverse-on-surface p-space-md rounded-2xl shadow-xl flex items-center gap-space-sm transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="feedback-toast">
+<div class="w-9 h-9 rounded-xl bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0" id="toast-icon-bg">
+<span class="material-symbols-outlined text-[20px]" id="toast-icon">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold" id="toast-title">Despesa Registrada!</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface/80 truncate" id="toast-desc">Balanço atualizado com sucesso.</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initGastifyExpenseCRUD() {
+    // Current Mode State
+    let isEditMode = false;
+    let selectedCategory = 'Alimentação';
+    let selectedPayment = 'Cartão de Crédito';
+
+    // Elements
+    const screenTitle = document.getElementById('screen-title');
+    const screenModeBadge = document.getElementById('screen-badge') || document.getElementById('screen-mode-badge');
+    const toggleModeBtn = document.getElementById('toggle-mode-btn');
+    const toggleModeText = document.getElementById('toggle-mode-text');
+    const amountInput = document.getElementById('expense-amount-input');
+    const titleInput = document.getElementById('expense-title');
+    const datetimeInput = document.getElementById('expense-datetime');
+    const recurrenceToggle = document.getElementById('recurrence-toggle');
+    const btnSave = document.getElementById('btn-save');
+    const btnSaveLabel = document.getElementById('btn-save-label');
+    const btnCancel = document.getElementById('btn-cancel');
+    const btnDelete = document.getElementById('btn-delete');
+    const selectedCategoryLabel = document.getElementById('selected-category-label');
+
+    const deleteModal = document.getElementById('delete-modal');
+    const modalConfirmDelete = document.getElementById('modal-confirm-delete');
+    const modalCancelDelete = document.getElementById('modal-cancel-delete');
+
+    const toast = document.getElementById('feedback-toast');
+    const toastTitle = document.getElementById('toast-title');
+    const toastDesc = document.getElementById('toast-desc');
+    const toastIcon = document.getElementById('toast-icon');
+    const toastIconBg = document.getElementById('toast-icon-bg');
+
+    // Populate Current Date/Time
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    datetimeInput.value = now.toISOString().slice(0, 16);
+
+    // Dynamic Currency Formatting
+    amountInput.addEventListener('input', (e) => {
+      let raw = e.target.value.replace(/\D/g, '');
+      if (!raw) {
+        e.target.value = '0,00';
+        return;
+      }
+      let floatVal = (parseInt(raw, 10) / 100).toFixed(2);
+      let parts = floatVal.split('.');
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      e.target.value = parts.join(',');
+    });
+
+    // Category Selection Handling
+    const categoryChips = document.querySelectorAll('.category-chip');
+    function selectCategory(catName) {
+      selectedCategory = catName;
+      if (selectedCategoryLabel) selectedCategoryLabel.textContent = catName;
+
+      categoryChips.forEach(chip => {
+        const matches = chip.getAttribute('data-category') === catName;
+        if (matches) {
+          chip.classList.add('bg-primary/10', 'font-semibold');
+          chip.classList.remove('bg-surface-container');
+        } else {
+          chip.classList.remove('bg-primary/10', 'font-semibold');
+          chip.classList.add('bg-surface-container');
+        }
+      });
+    }
+
+    categoryChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        selectCategory(chip.getAttribute('data-category'));
+      });
+    });
+    selectCategory('Alimentação');
+
+    // Payment Selection Handling
+    const paymentChips = document.querySelectorAll('.payment-chip');
+    function selectPayment(paymentName) {
+      selectedPayment = paymentName;
+      paymentChips.forEach(chip => {
+        const matches = chip.getAttribute('data-payment') === paymentName;
+        if (matches) {
+          chip.classList.add('bg-primary-container', 'text-on-primary');
+          chip.classList.remove('bg-surface-container', 'text-on-surface');
+        } else {
+          chip.classList.remove('bg-primary-container', 'text-on-primary');
+          chip.classList.add('bg-surface-container', 'text-on-surface');
+        }
+      });
+    }
+
+    paymentChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        selectPayment(chip.getAttribute('data-payment'));
+      });
+    });
+    selectPayment('Cartão de Crédito');
+
+    // Toast Notification Utility
+    let toastTimeout = null;
+    function showToast(title, desc, isError = false) {
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTitle.textContent = title;
+      toastDesc.textContent = desc;
+      
+      if (isError) {
+        toastIconBg.className = 'w-9 h-9 rounded-xl bg-error text-on-error flex items-center justify-center flex-shrink-0';
+        toastIcon.textContent = 'delete';
+      } else {
+        toastIconBg.className = 'w-9 h-9 rounded-xl bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0';
+        toastIcon.textContent = 'check';
+      }
+
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3200);
+    }
+
+    // Toggle Mode (Mocking CRUD transition between Create and Edit)
+    toggleModeBtn.addEventListener('click', () => {
+      isEditMode = !isEditMode;
+      if (isEditMode) {
+        screenTitle.textContent = 'Editar Despesa';
+        screenModeBadge.textContent = 'Edição #2041';
+        screenModeBadge.classList.replace('bg-primary/10', 'bg-tertiary/10');
+        screenModeBadge.classList.replace('text-primary', 'text-tertiary');
+        toggleModeText.textContent = 'Novo Gasto';
+
+        btnSaveLabel.textContent = 'Atualizar Despesa';
+        btnDelete.classList.remove('opacity-50', 'pointer-events-none');
+
+        // Prepopulate with mock existing expense
+        amountInput.value = '142,50';
+        titleInput.value = 'Almoço Restaurante Silva';
+        selectCategory('Alimentação');
+        selectPayment('Pix');
+        recurrenceToggle.checked = false;
+      } else {
+        screenTitle.textContent = 'Registrar Novo Gasto';
+        screenModeBadge.textContent = 'Novo Registro';
+        screenModeBadge.classList.replace('bg-tertiary/10', 'bg-primary/10');
+        screenModeBadge.classList.replace('text-tertiary', 'text-primary');
+        toggleModeText.textContent = 'Modo Edição';
+
+        btnSaveLabel.textContent = 'Salvar Despesa';
+        btnDelete.classList.add('opacity-50', 'pointer-events-none');
+
+        // Reset to pristine blank form
+        amountInput.value = '0,00';
+        titleInput.value = '';
+        selectCategory('Alimentação');
+        selectPayment('Cartão de Crédito');
+        recurrenceToggle.checked = false;
+      }
+    });
+
+    // Save Action
+    btnSave.addEventListener('click', () => {
+      if (!titleInput.value.trim()) {
+        titleInput.focus();
+        showToast('Atenção', 'Insira uma descrição para a despesa.');
+        return;
+      }
+      if (amountInput.value === '0,00' || amountInput.value === '0') {
+        amountInput.focus();
+        showToast('Atenção', 'Insira um valor maior que zero.');
+        return;
+      }
+
+      if (isEditMode) {
+        showToast('Gasto Atualizado!', `Modificado: ${titleInput.value} • R$ ${amountInput.value}`);
+      } else {
+        showToast('Despesa Salva!', `Adicionado: ${titleInput.value} • R$ ${amountInput.value}`);
+        // Reset form for seamless logging
+        amountInput.value = '0,00';
+        titleInput.value = '';
+      }
+    });
+
+    // Cancel Action
+    btnCancel.addEventListener('click', () => {
+      amountInput.value = '0,00';
+      titleInput.value = '';
+      showToast('Operação Cancelada', 'Os dados do formulário foram limpos.');
+    });
+
+    // Delete Flow with confirmation modal
+    btnDelete.addEventListener('click', () => {
+      if (!isEditMode) return;
+      deleteModal.classList.remove('hidden');
+    });
+
+    modalCancelDelete.addEventListener('click', () => {
+      deleteModal.classList.add('hidden');
+    });
+
+    modalConfirmDelete.addEventListener('click', () => {
+      deleteModal.classList.add('hidden');
+      showToast('Gasto Removido', 'A despesa foi excluída com sucesso.', true);
+      // Switch back to create mode smoothly
+      toggleModeBtn.click();
+    });
+
+    // Close modal when tapping backdrop
+    deleteModal.addEventListener('click', (e) => {
+      if (e.target === deleteModal) {
+        deleteModal.classList.add('hidden');
+      }
+    });
+  })();
+</script></main>
+
+</body></html>

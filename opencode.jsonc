@@ -1,0 +1,38 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "tech-lead",
+  "agents": {
+    "tech-lead": {
+      "mode": "primary",
+      "description": "Tech Lead e Gerente de Projetos do GASTIFY - orquestra e delega para backend, frontend-mobile e qa",
+      "permissions": [
+        { "action": "subagent", "resource": "*", "effect": "allow" },
+        { "action": "skill", "resource": "*", "effect": "allow" }
+      ]
+    },
+    "backend": {
+      "mode": "subagent",
+      "description": "Desenvolvedor Backend FastAPI & Double DB - PostgreSQL + NoSQL",
+      "permissions": [
+        { "action": "subagent", "resource": "*", "effect": "deny" },
+        { "action": "skill", "resource": "*", "effect": "allow" }
+      ]
+    },
+    "frontend-mobile": {
+      "mode": "subagent",
+      "description": "Desenvolvedor Frontend Android UI/UX - modo dark/light, dashboard e filtros",
+      "permissions": [
+        { "action": "subagent", "resource": "*", "effect": "deny" },
+        { "action": "skill", "resource": "*", "effect": "allow" }
+      ]
+    },
+    "qa": {
+      "mode": "subagent",
+      "description": "Engenheiro de QA - testes automatizados Pytest e validacao do Double Backup",
+      "permissions": [
+        { "action": "subagent", "resource": "*", "effect": "deny" },
+        { "action": "skill", "resource": "*", "effect": "allow" }
+      ]
+    }
+  }
+}

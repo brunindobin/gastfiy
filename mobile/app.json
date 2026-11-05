@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "Gastify",
+    "slug": "gastify",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "gastify",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#0A0E18",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0E18"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.brunomerullo.gastify"
+    },
+    "android": {
+      "package": "com.brunomerullo.gastify",
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0E18",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-font"
+    ]
+  }
+}

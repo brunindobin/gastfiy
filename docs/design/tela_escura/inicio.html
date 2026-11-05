@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-dim": "#0f131d",
+          "outline": "#859399",
+          "inverse-on-surface": "#2c303b",
+          "on-secondary-container": "#b0b2ff",
+          "on-secondary": "#1000a9",
+          "primary-container": "#00d2ff",
+          "on-surface": "#dfe2f1",
+          "primary-fixed-dim": "#47d6ff",
+          "on-tertiary-fixed": "#0f0069",
+          "tertiary-container": "#bcbaff",
+          "secondary-fixed": "#e1e0ff",
+          "tertiary": "#dcd9ff",
+          "inverse-primary": "#00677f",
+          "surface-container-highest": "#313540",
+          "on-primary-container": "#00566a",
+          "surface-container": "#1c1f2a",
+          "secondary-fixed-dim": "#c0c1ff",
+          "error": "#ffb4ab",
+          "on-primary": "#003543",
+          "on-error": "#690005",
+          "secondary": "#c0c1ff",
+          "surface-tint": "#47d6ff",
+          "background": "#0a0e18",
+          "on-error-container": "#ffdad6",
+          "on-surface-variant": "#94a3b8",
+          "on-tertiary-fixed-variant": "#3323cc",
+          "surface-container-lowest": "#0a0e18",
+          "on-primary-fixed": "#001f28",
+          "surface-variant": "#1e293b",
+          "surface-bright": "#353944",
+          "on-secondary-fixed-variant": "#2f2ebe",
+          "on-secondary-fixed": "#07006c",
+          "on-tertiary": "#1d00a5",
+          "error-container": "#93000a",
+          "outline-variant": "#1e293b",
+          "on-primary-fixed-variant": "#004e60",
+          "on-background": "#dfe2f1",
+          "on-tertiary-container": "#3c2fd3",
+          "tertiary-fixed": "#e2dfff",
+          "surface-container-low": "#171b26",
+          "surface": "#0f131d",
+          "surface-container-high": "#262a35",
+          "primary": "#00d2ff",
+          "inverse-surface": "#dfe2f1",
+          "secondary-container": "#3131c0",
+          "tertiary-fixed-dim": "#c3c0ff",
+          "primary-fixed": "#b6ebff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter": "1rem",
+          "space-xs": "0.25rem",
+          "space-md": "1rem",
+          "margin-desktop": "3rem",
+          "space-lg": "1.5rem",
+          "margin": "1.25rem",
+          "space-xl": "2.5rem",
+          "space-sm": "0.5rem",
+          "margin-tablet": "2rem",
+          "gutter-tablet": "1.5rem",
+          "gutter-desktop": "2rem"
+        },
+        "fontFamily": {
+          "headline-sm": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "display-xl": ["Plus Jakarta Sans"],
+          "display-xl-mobile": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+          "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+          "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+          "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+          "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+          "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+          "display-xl-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "800"}],
+          "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700"}]
+        }
+      }
+    }
+  }
+</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; } body { overscroll-behavior-y: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+      background-color: #0a0e18;
+    }
+  </style></head><body class="bg-[#0a0e18] text-[#dfe2f1] font-body-md text-body-md min-h-screen flex flex-col antialiased selection:bg-[#00d2ff]/20"><header class="fixed top-0 inset-x-0 z-50 bg-[#0f131d]/90 backdrop-blur-xl border-b border-[#1e293b]/70 pt-safe"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><div class="flex items-center gap-2"><img alt="Gastify" class="h-10 w-10 object-contain rounded-xl p-0.5 bg-gradient-to-tr from-[#171b26] to-[#1e293b] border border-[#00d2ff]/30 shadow-[0_0_12px_rgba(0,210,255,0.25)] flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1Wq0-87Qg4exdDp4Oufd4e3MZtgFt4o_PSG8Fk-OnitQn18NXmXlimAB0DGEh0qxjYpk2DZya3b69Dcl-kNNUe32YBXag4Pwvuh136-vnfQ4Ac2xF3VtqmpCZb7tRv0y774TzGYPFf9iHNuOlzwVK4HfwUumHMsOpbMDf51ZpBDjXkNWID4RHTErY7saD4T2LYkZluj2XWI-EsaEVTif_QVelJJi7hXrkPsdoDLbVxy"/><span class="font-headline-sm text-headline-sm font-extrabold text-white tracking-tight">Gastify</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notificações" class="w-10 h-10 flex items-center justify-center rounded-xl bg-[#171b26] border border-[#1e293b] text-[#94a3b8] hover:text-[#00d2ff] hover:border-[#00d2ff]/40 transition-all"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button aria-label="Perfil do Usuário" class="w-10 h-10 flex items-center justify-center rounded-xl border border-[#00d2ff]/40 overflow-hidden shadow-[0_0_10px_rgba(0,210,255,0.2)] transition-transform active:scale-95"><img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7N1OTY0M_UU9pIInC7ol9RVXexdcxl43UTrYWRf0PnjiZX5tMzQqmUBpxGgJgURNk020ybrKmimIMEM83aJGtQVDfALyq9u2pZ4q-RlTwcoihSewcb3IFjPVg2aPBunVqTPxwcrL1zTRVvFB0Ae9pJII6-vfuryMV3BNS8IWgi4q7fotysRWuWlWEauLoLRDm742F19D9M5H2D5YAaYRnftytqQk3jSKBV7s2ISBV"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-[#0a0e18]"><div class="flex flex-col w-full px-margin pb-6 gap-space-lg">
+<!-- Top Greeting & Live Ambient Time Card -->
+<section class="flex flex-col gap-space-sm pt-2">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-[#94a3b8] flex items-center gap-space-xs">
+          Bem-vindo de volta <span class="inline-block animate-bounce">👋</span>
+</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-white font-bold tracking-tight">
+          Olá, Bruno!
+        </h1>
+</div>
+<div class="flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-[#00d2ff]/10 border border-[#00d2ff]/30 text-[#00d2ff] shadow-[0_0_12px_rgba(0,210,255,0.15)]">
+<span class="w-2 h-2 rounded-full bg-[#00d2ff] animate-ping"></span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide uppercase">Online</span>
+</div>
+</div>
+<!-- Hero Card: Obsidian Lumina Gradient -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#101935] via-[#0d162c] to-[#0a0e18] border border-[#1e293b] text-white p-5 shadow-xl shadow-black/40">
+<!-- Decorative ambient shapes -->
+<div class="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-[#00d2ff]/15 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-[#6366f1]/20 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<!-- Date & Live Digital Clock -->
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-[#00d2ff] font-bold" id="current-day-label">
+              Quinta-feira, 24 de Outubro
+            </span>
+<span class="font-body-sm text-body-sm text-[#94a3b8]">
+              Controle Diário Inteligente
+            </span>
+</div>
+<div class="flex items-baseline gap-1.5 px-3 py-1 rounded-xl bg-[#171b26]/90 border border-[#1e293b] backdrop-blur-md shadow-inner">
+<span class="material-symbols-outlined text-[#00d2ff] text-[16px]">schedule</span>
+<span class="font-financial-numeric text-[20px] leading-tight font-bold tracking-tight text-white font-mono" id="live-clock">19:22</span>
+</div>
+</div>
+<!-- Metric split: Current Balance & Spent Today -->
+<div class="grid grid-cols-2 gap-space-sm pt-2">
+<div class="flex flex-col p-3.5 rounded-xl bg-[#0f131d]/80 border border-[#1e293b]/90 backdrop-blur-sm">
+<span class="font-label-sm text-label-sm text-[#94a3b8] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-[#00d2ff]">account_balance_wallet</span>
+              Saldo Restante
+            </span>
+<span class="font-headline-sm text-headline-sm font-bold text-white mt-1"><span class="text-[14px] font-medium text-[#94a3b8] mr-0.5 tracking-normal">R$</span><span class="font-bold tracking-tight">3.840,90</span></span>
+</div>
+<div class="flex flex-col p-3.5 rounded-xl bg-gradient-to-br from-[#00d2ff]/10 to-[#6366f1]/10 border border-[#00d2ff]/30 backdrop-blur-sm shadow-[0_0_15px_rgba(0,210,255,0.08)]">
+<span class="font-label-sm text-label-sm text-[#00d2ff] font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-[#00d2ff]">trending_down</span>
+              Gasto Hoje
+            </span>
+<span class="font-headline-sm text-headline-sm font-bold text-white mt-1" id="daily-spend-display"><span class="text-[14px] font-medium text-[#00d2ff] mr-0.5 tracking-normal">R$</span><span class="font-bold tracking-tight">142,50</span></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Day Carousel Selector -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#00d2ff] text-[20px]">calendar_month</span>
+<h2 class="font-label-lg text-label-lg text-white font-semibold">
+          Linha do Tempo
+        </h2>
+</div>
+<!-- Date Picker Input Button -->
+<label class="flex items-center gap-1.5 cursor-pointer text-[#00d2ff] hover:text-white px-2.5 py-1.5 rounded-xl bg-[#171b26] border border-[#1e293b] hover:border-[#00d2ff]/40 transition-all" for="custom-date-picker">
+<span class="material-symbols-outlined text-[17px]">event</span>
+<span class="font-label-sm text-label-sm font-semibold">Outra data</span>
+<input class="sr-only" id="custom-date-picker" type="date"/>
+</label>
+</div>
+<!-- Day Chips Carousel -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-1 scroll-smooth" id="days-carousel">
+<button class="day-chip flex flex-col items-center justify-center min-w-[70px] py-2 px-2.5 rounded-xl bg-[#171b26] border border-[#1e293b] text-[#94a3b8] hover:text-white hover:border-[#334155] active:scale-95 transition-all" data-date="2023-10-22" type="button">
+<span class="font-label-sm text-label-sm uppercase font-semibold">22 Out</span>
+<span class="font-body-sm text-body-sm opacity-80">Dom</span>
+</button>
+<button class="day-chip flex flex-col items-center justify-center min-w-[70px] py-2 px-2.5 rounded-xl bg-[#171b26] border border-[#1e293b] text-[#94a3b8] hover:text-white hover:border-[#334155] active:scale-95 transition-all" data-date="2023-10-23" type="button">
+<span class="font-label-sm text-label-sm uppercase font-semibold">Ontem</span>
+<span class="font-body-sm text-body-sm opacity-80">23 Out</span>
+</button>
+<!-- Active Day Chip -->
+<button class="day-chip is-active flex flex-col items-center justify-center min-w-[84px] py-2 px-3 rounded-xl bg-gradient-to-r from-[#00d2ff] to-[#00b4d8] text-[#001f28] border border-[#00d2ff] shadow-[0_0_16px_rgba(0,210,255,0.4)] active:scale-95 transition-all" data-date="2023-10-24" type="button">
+<span class="font-label-sm text-label-sm font-bold tracking-wide uppercase">Hoje</span>
+<span class="font-body-sm text-body-sm font-bold text-[#003543]">24 Out</span>
+</button>
+<button class="day-chip flex flex-col items-center justify-center min-w-[70px] py-2 px-2.5 rounded-xl bg-[#171b26] border border-[#1e293b] text-[#94a3b8] hover:text-white hover:border-[#334155] active:scale-95 transition-all" data-date="2023-10-25" type="button">
+<span class="font-label-sm text-label-sm uppercase font-semibold">Amanhã</span>
+<span class="font-body-sm text-body-sm opacity-80">25 Out</span>
+</button>
+<button class="day-chip flex flex-col items-center justify-center min-w-[70px] py-2 px-2.5 rounded-xl bg-[#171b26] border border-[#1e293b] text-[#94a3b8] hover:text-white hover:border-[#334155] active:scale-95 transition-all" data-date="2023-10-26" type="button">
+<span class="font-label-sm text-label-sm uppercase font-semibold">26 Out</span>
+<span class="font-body-sm text-body-sm opacity-80">Qui</span>
+</button>
+</div>
+<!-- Active Filter Notification Pill -->
+<div class="flex items-center justify-between px-3.5 py-2 rounded-xl bg-[#171b26] border border-[#1e293b] text-[#94a3b8]">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2 h-2 rounded-full bg-[#00d2ff] shadow-[0_0_8px_#00d2ff]"></span>
+<span class="font-body-sm text-body-sm truncate text-white" id="active-day-indicator">
+          Exibindo despesas de <strong class="text-[#00d2ff]">Hoje, 24 de Outubro</strong>
+</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-[#0f131d] border border-[#1e293b] text-[#00d2ff] font-semibold" id="total-count-badge">3 itens</span>
+</div>
+</section>
+<!-- Expense List Section -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-white font-semibold">
+        Gastos Registrados
+      </h2>
+<button class="flex items-center gap-1.5 font-label-md text-label-md text-[#00d2ff] hover:text-white font-semibold active:scale-95 transition-all" id="quick-add-btn">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+        Adicionar
+      </button>
+</div>
+<div class="flex flex-col gap-space-sm" id="expenses-container">
+<article class="expense-card flex items-center justify-between p-3.5 rounded-2xl bg-[#0f131d] border border-[#1e293b] shadow-lg shadow-black/20 hover:border-[#00d2ff]/40 transition-all" data-id="exp-1">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 bg-[#00d2ff]/10 border border-[#00d2ff]/20 text-[#00d2ff]">
+<span class="material-symbols-outlined text-[22px]">restaurant</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-white font-semibold truncate">
+                Almoço Executivo
+              </span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-md bg-[#00d2ff]/10 text-[#00d2ff] border border-[#00d2ff]/20 font-medium">
+                  Alimentação
+                </span>
+<span class="font-body-sm text-body-sm text-[#94a3b8] flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                  12:45
+                </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 flex-shrink-0">
+<span class="font-headline-sm text-headline-sm font-bold text-white"><span class="text-[#94a3b8] font-medium text-[14px] mr-1">- R$</span><span class="font-bold tracking-tight">48,90</span></span>
+<div class="flex items-center gap-1 opacity-80 hover:opacity-100">
+<button aria-label="Editar Gasto" class="edit-btn w-8 h-8 rounded-lg flex items-center justify-center text-[#94a3b8] hover:text-[#00d2ff] hover:bg-[#171b26] transition-colors active:scale-90" data-action="edit" data-id="exp-1">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Excluir Gasto" class="delete-btn w-8 h-8 rounded-lg flex items-center justify-center text-[#94a3b8] hover:text-[#ffb4ab] hover:bg-[#93000a]/20 transition-colors active:scale-90" data-action="delete" data-id="exp-1">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</article>
+<article class="expense-card flex items-center justify-between p-3.5 rounded-2xl bg-[#0f131d] border border-[#1e293b] shadow-lg shadow-black/20 hover:border-[#6366f1]/40 transition-all" data-id="exp-2">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 bg-[#6366f1]/15 border border-[#6366f1]/30 text-[#a5b4fc]">
+<span class="material-symbols-outlined text-[22px]">local_gas_station</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-white font-semibold truncate">
+                Abastecimento Moto
+              </span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-md bg-[#6366f1]/15 text-[#c7d2fe] border border-[#6366f1]/30 font-medium">
+                  Obrigatório
+                </span>
+<span class="font-body-sm text-body-sm text-[#94a3b8] flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                  09:15
+                </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 flex-shrink-0">
+<span class="font-headline-sm text-headline-sm font-bold text-white"><span class="text-[#94a3b8] font-medium text-[14px] mr-1">- R$</span><span class="font-bold tracking-tight">65,00</span></span>
+<div class="flex items-center gap-1 opacity-80 hover:opacity-100">
+<button aria-label="Editar Gasto" class="edit-btn w-8 h-8 rounded-lg flex items-center justify-center text-[#94a3b8] hover:text-[#00d2ff] hover:bg-[#171b26] transition-colors active:scale-90" data-action="edit" data-id="exp-2">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Excluir Gasto" class="delete-btn w-8 h-8 rounded-lg flex items-center justify-center text-[#94a3b8] hover:text-[#ffb4ab] hover:bg-[#93000a]/20 transition-colors active:scale-90" data-action="delete" data-id="exp-2">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</article>
+<article class="expense-card flex items-center justify-between p-3.5 rounded-2xl bg-[#0f131d] border border-[#1e293b] shadow-lg shadow-black/20 hover:border-[#f43f5e]/40 transition-all" data-id="exp-3">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 bg-[#f43f5e]/15 border border-[#f43f5e]/30 text-[#fda4af]">
+<span class="material-symbols-outlined text-[22px]">local_cafe</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-white font-semibold truncate">
+                Café Especial &amp; Cookie
+              </span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-md bg-[#f43f5e]/15 text-[#fda4af] border border-[#f43f5e]/30 font-medium">
+                  Lazer
+                </span>
+<span class="font-body-sm text-body-sm text-[#94a3b8] flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+                  10:30
+                </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 flex-shrink-0">
+<span class="font-headline-sm text-headline-sm font-bold text-white"><span class="text-[#94a3b8] font-medium text-[14px] mr-1">- R$</span><span class="font-bold tracking-tight">28,60</span></span>
+<div class="flex items-center gap-1 opacity-80 hover:opacity-100">
+<button aria-label="Editar Gasto" class="edit-btn w-8 h-8 rounded-lg flex items-center justify-center text-[#94a3b8] hover:text-[#00d2ff] hover:bg-[#171b26] transition-colors active:scale-90" data-action="edit" data-id="exp-3">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Excluir Gasto" class="delete-btn w-8 h-8 rounded-lg flex items-center justify-center text-[#94a3b8] hover:text-[#ffb4ab] hover:bg-[#93000a]/20 transition-colors active:scale-90" data-action="delete" data-id="exp-3">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Quick Add Inline Trigger Card -->
+<div class="p-3.5 rounded-2xl bg-[#171b26] border border-[#1e293b] flex items-center justify-between cursor-pointer hover:border-[#00d2ff]/50 hover:bg-[#1c2233] transition-all group" id="quick-input-box">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-[#00d2ff]/10 border border-[#00d2ff]/30 text-[#00d2ff] flex items-center justify-center group-hover:scale-105 group-hover:bg-[#00d2ff] group-hover:text-[#001f28] transition-all">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-white font-semibold">Novo gasto rápido</span>
+<span class="font-body-sm text-body-sm text-[#94a3b8]">Lançar valor no dia selecionado</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#94a3b8] group-hover:text-[#00d2ff] group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+</section>
+<!-- Interactive Modal / Drawer for Editing/Adding (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4 hidden transition-opacity" id="action-drawer">
+<div class="w-full max-w-md bg-[#0f131d] border border-[#1e293b] rounded-t-3xl sm:rounded-2xl p-5 shadow-2xl flex flex-col gap-space-md animate-in slide-in-from-bottom">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-[#00d2ff]/10 border border-[#00d2ff]/30 text-[#00d2ff] flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-white font-bold" id="drawer-title">Lançar Despesa</span>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-[#94a3b8] hover:text-white hover:bg-[#171b26]" id="close-drawer-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-[#94a3b8] font-semibold">Título do Gasto</label>
+<input class="px-3.5 py-2.5 rounded-xl bg-[#171b26] border border-[#1e293b] text-white placeholder:text-[#64748b] font-body-md focus:outline-none focus:border-[#00d2ff] focus:ring-1 focus:ring-[#00d2ff]" id="drawer-desc" placeholder="Ex: Farmácia, Café, Padaria" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-[#94a3b8] font-semibold">Valor (R$)</label>
+<input class="px-3.5 py-2.5 rounded-xl bg-[#171b26] border border-[#1e293b] text-white placeholder:text-[#64748b] font-headline-sm font-bold focus:outline-none focus:border-[#00d2ff] focus:ring-1 focus:ring-[#00d2ff]" id="drawer-amount" placeholder="0,00" step="0.01" type="number"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-[#94a3b8] font-semibold">Categoria</label>
+<select class="px-3 py-2.5 rounded-xl bg-[#171b26] border border-[#1e293b] text-white font-body-md focus:outline-none focus:border-[#00d2ff] focus:ring-1 focus:ring-[#00d2ff]" id="drawer-category">
+<option class="bg-[#0f131d]" value="Alimentação">Alimentação</option>
+<option class="bg-[#0f131d]" value="Obrigatório">Obrigatório</option>
+<option class="bg-[#0f131d]" value="Lazer">Lazer</option>
+<option class="bg-[#0f131d]" value="Outros">Outros</option>
+</select>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-2">
+<button class="flex-1 py-3 rounded-xl bg-gradient-to-r from-[#00d2ff] to-[#00b4d8] text-[#001f28] font-label-lg text-label-lg font-bold shadow-[0_0_20px_rgba(0,210,255,0.35)] active:scale-98 transition-all flex items-center justify-center gap-2" id="save-expense-btn">
+<span class="material-symbols-outlined text-[18px]">check</span>
+          Salvar Despesa
+        </button>
+</div>
+</div>
+</div>
+<!-- Developer Footer & Brand Signature Card -->
+<footer class="mt-4 pt-2">
+<div class="flex flex-col items-center justify-center p-4 rounded-2xl bg-[#171b26] border border-[#1e293b] text-center gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-[#00d2ff]/15 border border-[#00d2ff]/30 text-[#00d2ff] font-label-sm text-label-sm font-bold tracking-wider uppercase">
+          Dev Signature
+        </span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#334155]"></span>
+<span class="font-label-sm text-label-sm text-[#94a3b8] font-medium">Gastify v1.0</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#94a3b8]">
+        Desenvolvido com dedicação por <strong class="text-white font-semibold">Bruno Merullo</strong>
+</p>
+<div class="flex items-center gap-1.5 text-[#00d2ff] pt-1">
+<span class="material-symbols-outlined text-[14px]">favorite</span>
+<span class="font-label-sm text-label-sm font-medium">Controle financeiro com simplicidade</span>
+</div>
+</div>
+</footer>
+</div>
+<!-- Interactive Client-side Scripting -->
+<script>
+  (function () {
+    // 1. Real-time Clock Implementation
+    function updateClock() {
+      const clockEl = document.getElementById('live-clock');
+      if (!clockEl) return;
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      clockEl.textContent = `${hours}:${minutes}`;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    // 2. State & Dynamic Data
+    const expenseData = {
+      '2023-10-24': [
+        { id: 'exp-1', title: 'Almoço Executivo', category: 'Alimentação', time: '12:45', amount: 48.90, icon: 'restaurant', colorBg: 'bg-[#00d2ff]/10 border border-[#00d2ff]/20', colorText: 'text-[#00d2ff]' },
+        { id: 'exp-2', title: 'Abastecimento Moto', category: 'Obrigatório', time: '09:15', amount: 65.00, icon: 'local_gas_station', colorBg: 'bg-[#6366f1]/15 border border-[#6366f1]/30', colorText: 'text-[#a5b4fc]' },
+        { id: 'exp-3', title: 'Café Especial & Cookie', category: 'Lazer', time: '10:30', amount: 28.60, icon: 'local_cafe', colorBg: 'bg-[#f43f5e]/15 border border-[#f43f5e]/30', colorText: 'text-[#fda4af]' }
+      ],
+      '2023-10-23': [
+        { id: 'exp-4', title: 'Supermercado Mensal', category: 'Obrigatório', time: '18:20', amount: 210.40, icon: 'shopping_cart', colorBg: 'bg-[#6366f1]/15 border border-[#6366f1]/30', colorText: 'text-[#a5b4fc]' },
+        { id: 'exp-5', title: 'Sorvete Artesanal', category: 'Lazer', time: '20:10', amount: 22.00, icon: 'icecream', colorBg: 'bg-[#f43f5e]/15 border border-[#f43f5e]/30', colorText: 'text-[#fda4af]' }
+      ],
+      '2023-10-22': [
+        { id: 'exp-6', title: 'Cinema & Pipoca', category: 'Lazer', time: '16:00', amount: 74.00, icon: 'movie', colorBg: 'bg-[#f43f5e]/15 border border-[#f43f5e]/30', colorText: 'text-[#fda4af]' }
+      ]
+    };
+
+    let selectedDate = '2023-10-24';
+    let currentEditId = null;
+
+    const expensesContainer = document.getElementById('expenses-container');
+    const dailySpendDisplay = document.getElementById('daily-spend-display');
+    const activeDayIndicator = document.getElementById('active-day-indicator');
+    const totalCountBadge = document.getElementById('total-count-badge');
+    const drawer = document.getElementById('action-drawer');
+    const drawerTitle = document.getElementById('drawer-title');
+    const drawerDesc = document.getElementById('drawer-desc');
+    const drawerAmount = document.getElementById('drawer-amount');
+    const drawerCategory = document.getElementById('drawer-category');
+
+    function formatCurrency(val) {
+      return 'R$ ' + val.toFixed(2).replace('.', ',');
+    }
+
+    function renderExpenses() {
+      const list = expenseData[selectedDate] || [];
+      const total = list.reduce((acc, curr) => acc + curr.amount, 0);
+
+      dailySpendDisplay.innerHTML = `<span class="text-[14px] font-medium text-[#00d2ff] mr-0.5 tracking-normal">R$</span><span class="font-bold tracking-tight">${total.toFixed(2).replace('.', ',')}</span>`;
+      totalCountBadge.textContent = `${list.length} ${list.length === 1 ? 'item' : 'itens'}`;
+
+      if (list.length === 0) {
+        expensesContainer.innerHTML = `
+          <div class="flex flex-col items-center justify-center p-8 rounded-2xl bg-[#0f131d] border border-[#1e293b] text-center gap-space-xs">
+            <div class="w-12 h-12 rounded-full bg-[#171b26] border border-[#1e293b] flex items-center justify-center text-[#94a3b8]">
+              <span class="material-symbols-outlined text-[24px]">savings</span>
+            </div>
+            <span class="font-label-lg text-label-lg font-semibold text-white">Nenhum gasto neste dia</span>
+            <span class="font-body-sm text-body-sm text-[#94a3b8] max-w-[200px]">Você não lançou nenhuma despesa para esta data.</span>
+          </div>
+        `;
+        return;
+      }
+
+      expensesContainer.innerHTML = list.map(item => `
+        <article data-id="${item.id}" class="expense-card flex items-center justify-between p-3.5 rounded-2xl bg-[#0f131d] border border-[#1e293b] shadow-lg shadow-black/20 hover:border-[#00d2ff]/40 transition-all">
+          <div class="flex items-center gap-space-sm min-w-0">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 ${item.colorBg} ${item.colorText}">
+              <span class="material-symbols-outlined text-[22px]">${item.icon}</span>
+            </div>
+            <div class="flex flex-col min-w-0">
+              <span class="font-label-lg text-label-lg text-white font-semibold truncate">
+                ${item.title}
+              </span>
+              <div class="flex items-center gap-2 mt-0.5">
+                <span class="font-label-sm text-label-sm px-2 py-0.5 rounded-md ${item.colorBg} ${item.colorText} font-medium">
+                  ${item.category}
+                </span>
+                <span class="font-body-sm text-body-sm text-[#94a3b8] flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[13px]">schedule</span>
+                  ${item.time}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-end gap-1 flex-shrink-0">
+            <span class="font-headline-sm text-headline-sm font-bold text-white">
+              <span class="text-[#94a3b8] font-medium text-[14px] mr-1">- R$</span><span class="font-bold tracking-tight">${item.amount.toFixed(2).replace('.', ',')}</span>
+            </span>
+            <div class="flex items-center gap-1 opacity-80 hover:opacity-100">
+              <button aria-label="Editar Gasto" data-action="edit" data-id="${item.id}" class="edit-btn w-8 h-8 rounded-lg flex items-center justify-center text-[#94a3b8] hover:text-[#00d2ff] hover:bg-[#171b26] transition-colors active:scale-90">
+                <span class="material-symbols-outlined text-[18px]">edit</span>
+              </button>
+              <button aria-label="Excluir Gasto" data-action="delete" data-id="${item.id}" class="delete-btn w-8 h-8 rounded-lg flex items-center justify-center text-[#94a3b8] hover:text-[#ffb4ab] hover:bg-[#93000a]/20 transition-colors active:scale-90">
+                <span class="material-symbols-outlined text-[18px]">delete</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // 3. Carousel Chip Selection
+    const dayChips = document.querySelectorAll('.day-chip');
+    dayChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        dayChips.forEach(c => {
+          c.classList.remove('is-active', 'bg-gradient-to-r', 'from-[#00d2ff]', 'to-[#00b4d8]', 'text-[#001f28]', 'border-[#00d2ff]', 'shadow-[0_0_16px_rgba(0,210,255,0.4)]');
+          c.classList.add('bg-[#171b26]', 'border-[#1e293b]', 'text-[#94a3b8]');
+          const subText = c.querySelector('span:last-child');
+          if (subText) {
+            subText.classList.remove('text-[#003543]');
+            subText.classList.add('opacity-80');
+          }
+        });
+
+        chip.classList.remove('bg-[#171b26]', 'border-[#1e293b]', 'text-[#94a3b8]');
+        chip.classList.add('is-active', 'bg-gradient-to-r', 'from-[#00d2ff]', 'to-[#00b4d8]', 'text-[#001f28]', 'border-[#00d2ff]', 'shadow-[0_0_16px_rgba(0,210,255,0.4)]');
+        const activeSub = chip.querySelector('span:last-child');
+        if (activeSub) {
+          activeSub.classList.remove('opacity-80');
+          activeSub.classList.add('text-[#003543]');
+        }
+
+        selectedDate = chip.getAttribute('data-date');
+        const label = chip.querySelector('span:first-child').textContent.trim();
+        const sub = chip.querySelector('span:last-child').textContent.trim();
+        activeDayIndicator.innerHTML = `Exibindo despesas de <strong class="text-[#00d2ff]">${label} (${sub})</strong>`;
+        renderExpenses();
+      });
+    });
+
+    // 4. Custom HTML Date Picker Listener
+    const customPicker = document.getElementById('custom-date-picker');
+    customPicker.addEventListener('change', (e) => {
+      if (!e.target.value) return;
+      selectedDate = e.target.value;
+      const [year, month, day] = selectedDate.split('-');
+      activeDayIndicator.innerHTML = `Exibindo despesas de <strong class="text-[#00d2ff]">${day}/${month}/${year}</strong>`;
+      
+      // Reset chips active state
+      dayChips.forEach(c => {
+        c.classList.remove('is-active', 'bg-gradient-to-r', 'from-[#00d2ff]', 'to-[#00b4d8]', 'text-[#001f28]', 'border-[#00d2ff]', 'shadow-[0_0_16px_rgba(0,210,255,0.4)]');
+        c.classList.add('bg-[#171b26]', 'border-[#1e293b]', 'text-[#94a3b8]');
+      });
+      renderExpenses();
+    });
+
+    // 5. Drawer / Modal Management
+    function openDrawer(isEdit = false, item = null) {
+      currentEditId = isEdit ? item.id : null;
+      drawerTitle.textContent = isEdit ? 'Editar Despesa' : 'Novo Lançamento';
+      drawerDesc.value = item ? item.title : '';
+      drawerAmount.value = item ? item.amount : '';
+      drawerCategory.value = item ? item.category : 'Alimentação';
+      drawer.classList.remove('hidden');
+    }
+
+    function closeDrawer() {
+      drawer.classList.add('hidden');
+      currentEditId = null;
+    }
+
+    document.getElementById('close-drawer-btn').addEventListener('click', closeDrawer);
+    document.getElementById('quick-add-btn').addEventListener('click', () => openDrawer(false));
+    document.getElementById('quick-input-box').addEventListener('click', () => openDrawer(false));
+
+    // Delegate Click Events on Expense List (Edit / Delete)
+    expensesContainer.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-action]');
+      if (!btn) return;
+      const action = btn.getAttribute('data-action');
+      const id = btn.getAttribute('data-id');
+      const list = expenseData[selectedDate] || [];
+
+      if (action === 'delete') {
+        const itemEl = btn.closest('.expense-card');
+        itemEl.style.transform = 'scale(0.95)';
+        itemEl.style.opacity = '0';
+        setTimeout(() => {
+          expenseData[selectedDate] = list.filter(item => item.id !== id);
+          renderExpenses();
+        }, 180);
+      } else if (action === 'edit') {
+        const item = list.find(it => it.id === id);
+        if (item) openDrawer(true, item);
+      }
+    });
+
+    // Save Expense Event
+    document.getElementById('save-expense-btn').addEventListener('click', () => {
+      const desc = drawerDesc.value.trim() || 'Despesa Avulsa';
+      const val = parseFloat(drawerAmount.value) || 0.00;
+      const cat = drawerCategory.value;
+
+      let catBg = 'bg-[#00d2ff]/10 border border-[#00d2ff]/20';
+      let catText = 'text-[#00d2ff]';
+      let icon = 'receipt';
+
+      if (cat === 'Obrigatório') {
+        catBg = 'bg-[#6366f1]/15 border border-[#6366f1]/30';
+        catText = 'text-[#a5b4fc]';
+        icon = 'local_gas_station';
+      } else if (cat === 'Lazer') {
+        catBg = 'bg-[#f43f5e]/15 border border-[#f43f5e]/30';
+        catText = 'text-[#fda4af]';
+        icon = 'local_cafe';
+      } else if (cat === 'Alimentação') {
+        catBg = 'bg-[#00d2ff]/10 border border-[#00d2ff]/20';
+        catText = 'text-[#00d2ff]';
+        icon = 'restaurant';
+      }
+
+      if (!expenseData[selectedDate]) {
+        expenseData[selectedDate] = [];
+      }
+
+      const now = new Date();
+      const timeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+
+      if (currentEditId) {
+        const it = expenseData[selectedDate].find(i => i.id === currentEditId);
+        if (it) {
+          it.title = desc;
+          it.amount = val;
+          it.category = cat;
+          it.icon = icon;
+          it.colorBg = catBg;
+          it.colorText = catText;
+        }
+      } else {
+        expenseData[selectedDate].unshift({
+          id: 'exp-' + Date.now(),
+          title: desc,
+          category: cat,
+          time: timeStr,
+          amount: val,
+          icon: icon,
+          colorBg: catBg,
+          colorText: catText
+        });
+      }
+
+      closeDrawer();
+      renderExpenses();
+    });
+
+    renderExpenses();
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-[#0f131d]/90 backdrop-blur-xl border-t border-[#1e293b]/80" data-active-classes="text-[#00d2ff] font-semibold"><div class="flex justify-around items-center h-20 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] py-1 transition-all text-[#00d2ff] font-semibold" data-path="inicio" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Início</span></a><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] py-1 text-[#94a3b8] hover:text-[#00d2ff] transition-all" data-path="analise" href="#"><span class="material-symbols-outlined text-[24px]">bar_chart</span><span class="font-label-sm text-label-sm">Análise</span></a><div class="flex items-center justify-center -mt-6"><a aria-label="Novo Gasto" class="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-tr from-[#00d2ff] to-[#6366f1] text-[#001f28] shadow-[0_0_24px_rgba(0,210,255,0.45)] hover:scale-105 active:scale-95 transition-all" data-path="novo-gasto" href="#"><span class="material-symbols-outlined text-[30px] font-bold">add</span></a></div><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] py-1 text-[#94a3b8] hover:text-[#00d2ff] transition-all" data-path="historico" href="#"><span class="material-symbols-outlined text-[24px]">receipt_long</span><span class="font-label-sm text-label-sm">Histórico</span></a><a class="flex flex-col items-center justify-center gap-space-2xs min-w-[56px] min-h-[44px] py-1 text-[#94a3b8] hover:text-[#00d2ff] transition-all" data-path="filtros" href="#"><span class="material-symbols-outlined text-[24px]">tune</span><span class="font-label-sm text-label-sm">Filtros</span></a></div></nav>
+</body></html>
